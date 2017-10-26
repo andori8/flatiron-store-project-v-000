@@ -18,5 +18,6 @@ class Cart < ActiveRecord::Base
       line_item
     else
       self.line_items.build(item_id: item_id)
+    end
   end
 end
