@@ -25,5 +25,7 @@ class Cart < ActiveRecord::Base
     self.update(status: "submitted")
     self.line_items.each do |line_item|
       line_item.item.update(inventory: line_item.item.inventory - line_item.quantity)
+    end
   end
 end
+
